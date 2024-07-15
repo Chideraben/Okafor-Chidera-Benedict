@@ -1,0 +1,9 @@
+.header.sticky{
+    background-color: #fdfdfdf5;
+}
+.header{
+    position:fixed;
+    background: transparent;
+    transition: .5s;
+    z-index: 100;
+}

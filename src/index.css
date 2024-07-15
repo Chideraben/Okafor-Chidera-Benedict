@@ -2,3 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
+.app{
+    transition: background-color 0.5s;
+
+}
+
+.dark-mode{
+    background-color: black;
+    transition: background-color 0.5s;
+    color: #fdfdfd;
+}
