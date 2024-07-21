@@ -4,11 +4,15 @@
 
 .app{
     transition: background-color 0.5s;
-
+    background-color: lightgray;
 }
 
 .dark-mode{
-    background-color: black;
+    background-color: rgba(46, 43, 43, 0.904);
     transition: background-color 0.5s;
     color: #fdfdfd;
+}
+.dark-mode #color{
+    background-color: gray;
+    color: black;
 }

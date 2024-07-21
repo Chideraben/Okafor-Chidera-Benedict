@@ -2,7 +2,7 @@ import React from 'react'
 import Image from './Images/BenImg.jpg'
 export default function About() {
   return (
-    <div className='h-[80vh] flex justify-center ' id='about'>
+    <div className=' flex justify-center ' id='about'>
         <div className='flex flex-wrap gap-11 justify-between items-center'>
             <div className=''>
                 <img src={Image} alt='' className='w-[400px] h-[400px]'></img>

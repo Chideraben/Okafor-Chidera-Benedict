@@ -1,11 +1,10 @@
 import {useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
 import {CiLight} from "react-icons/ci"
 import {CiDark} from "react-icons/ci"
 import './Style/Navbar.css'
-function Navbar({toggleDarkMode}){
+import {Progress , Flex , Box, Text, Button, UnorderedList, ListItem, Link} from '@chakra-ui/react';
+function Navbar({toggleDarkMode, darkMode}){
   const [isOpen, setIsOpen] = useState(false);
-  const [darkMode, setDarkMode] = useState(false);
 
   
   useEffect(()=>{
@@ -28,8 +27,8 @@ function Navbar({toggleDarkMode}){
     document.getElementById(id).scrollIntoView({behavior: 'smooth'})
   }
   return (
-    <nav className=' fixed shadow-2xl w-full  header'>
-      <div className=' max-w-7xl  mx-auto px-4 sm:px-6 '>
+    <Box as='nav' boxShadow='2xl' width='100%' className='header'>
+      <Box className=' max-w-7xl  mx-auto px-4 sm:px-6 '>
         <div className='flex justify-between items-center h-16'>
           {/* Logo */}
           <div className='flex-shrink-0'>
@@ -38,55 +37,47 @@ function Navbar({toggleDarkMode}){
             </p>
           </div>
           {/* Desktop Menu */}
-          <div >
-            <ul className='hidden font-medium items-center md:flex space-x-8  '>
-              <li onClick={()=>{scrollToSection('home')}} className='text-[#00b7ff] animate-bounce before:absolute before:w-full before:h-[2px] before:mt-6 relative before:bg-[#10132e] hover:text-[#1C34FF] hover:origin-right  hover:translate-y-1 hover:scale-110 duration-700  hover:border-b-2 '>
+          <Box >
+            <UnorderedList className='hidden font-medium items-center md:flex space-x-8  text-base'>
+              <ListItem listStyleType='none' style={{fontFamily: ' "Varela Round", sans-serif'}} onClick={()=>{scrollToSection('home')}} className='text-[#00b7ff] animate-bounce before:absolute before:w-full before:h-[2px] before:mt-6 relative before:bg-[#10132e] hover:text-[#1C34FF] hover:origin-right  hover:translate-y-1 hover:scale-110 duration-700  hover:border-b-2 '>
                 <Link href='/'>
                   Home
                 </Link>
-              </li>
+              </ListItem>
 
-              <li onClick={()=>{scrollToSection('about')}} className=' text-[#c2c9c5]   hover:translate-y-1 hover:scale-110 duration-700 hover:text-[#1C34FF] hover:border-b-2 hover:border-b-[red]'>
-                <Link href='/about' >
-                  About
-                </Link>
-              </li>
 
-              <li onClick={()=>{scrollToSection('skills')}} className=' text-[#c2c9c5]   hover:translate-y-1 hover:scale-110 duration-700 hover:text-[#1C34FF] hover:border-b-2 hover:border-b-[red]'>
-                <Link href='/skill' >
+              <ListItem listStyleType='none' style={{fontFamily: ' "Varela Round", sans-serif'}} onClick={()=>{scrollToSection('skills')}} className=''>
+                <Link href='/skill' className=' text-[black] bg-[white] font-semiBold text-base  hover:scale-110' >
                   Skills
                 </Link>
-              </li>
+              </ListItem>
 
-              <li onClick={()=>{scrollToSection('projects')}} className='text-[#c2c9c5] transition ease-in-out delay-150 hover:translate-y-1 hover:scale-110 duration-700 hover:text-[#1C34FF] hover:border-b-2 hover:border-b-[red] '>
-                <Link href='/projects' >
+              <ListItem listStyleType='none' style={{fontFamily: ' "Varela Round", sans-serif'}} onClick={()=>{scrollToSection('projects')}} className='text-[#c2c9c5] font-normal text-base font-[sans-serif]  hover:scale-110 '>
+                <Link href='/projects' className='text-[#c2c9c5] font-semiBold text-base hover:scale-110' >
                   Projects
                 </Link>
-              </li>
+              </ListItem>
 
-              <li onClick={()=>{scrollToSection('contact')}} className='text-[#c2c9c5] transition ease-in-out delay-150 hover:translate-y-1 hover:scale-110 duration-700 hover:text-[#1C34FF] hover:border-b-2 hover:border-b-[red]'>
-                <Link href='/contact' >
+              <ListItem listStyleType='none' id='Theme' style={{fontFamily: ' "Varela Round", sans-serif'}} onClick={()=>{scrollToSection('contact')}} className='text-[#c2c9c5] font-normal text-base font-[sans-serif] hover:scale-110'>
+                <Link href='/contact' className='text-[#c2c9c5] font-semiBold text-base font-serif hover:scale-110' >
                   Contact
                 </Link>
-              </li>
-              <button onClick={(toggleDarkMode)}>
-                <p onClick={()=> setDarkMode(!darkMode)}>
-                 {!darkMode ? (<CiLight className='w-[30px] h-[30px]'/>) : (<CiDark className='text-black w-[30px] h-[30px]'/>)}
-                </p>
-             
-              </button>
-            </ul>
+              </ListItem>
+              <Button onClick={(toggleDarkMode)} fontSize='30px'>
+               
+                 {!darkMode ? (<CiLight />) : (<CiDark className='text-black '/>)}
+              </Button>
+            </UnorderedList>
             
-          </div>
+          </Box>
           
           {/* Mobile Menu Button */}
           <div className='flex md:hidden'>
-            <button onClick={(toggleDarkMode)}>
-              <p onClick={()=> setDarkMode(!darkMode)}>
+            <Button onClick={(toggleDarkMode)}>
+              
                 {!darkMode ? (<CiLight className='w-[25px] h-[25px]'/>) : (<CiDark className='text-black w-[25px] h-[25px]'/>)}
-              </p>
-             
-            </button>
+              
+            </Button>
             <button
               onClick={() => setIsOpen(!isOpen)}
               type='button'
@@ -129,7 +120,7 @@ function Navbar({toggleDarkMode}){
             </button>
           </div>
         </div>
-      </div>
+      </Box>
       {/* Mobile Menu */}
       {isOpen && (
         <div className='md:hidden bg-[#fdfdfd]' id='mobile-menu '>
@@ -176,7 +167,7 @@ function Navbar({toggleDarkMode}){
           </div>
         </div>
       )}
-    </nav>
+    </Box>
   );
 };
 

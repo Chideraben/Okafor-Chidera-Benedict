@@ -7,7 +7,7 @@ import MyProjects from './Components/MyProjects';
 import Contact from './Components/Contact';
 import MySkills from './Components/MySkills';
 import {BrowserRouter as Router, Routes , Route, Navigate} from 'react-router-dom'
-
+import Footer from './Components/Footer'
 function App() {
   const [darkMode, setDarkMode] = useState(false);
 
@@ -17,13 +17,14 @@ function App() {
   return (
     <main className={darkMode ? 'dark-mode' : 'app'}>
       <Router>
-        <Navbar toggleDarkMode={toggleDarkMode}/>
+        <Navbar 
+        darkMode={darkMode}
+        toggleDarkMode={toggleDarkMode}/>
         <Home/>
         <MySkills/>
-         <About/>
         <MyProjects  />
         <Contact />
-        
+        <Footer/>
         <Routes>
           <Route 
          />

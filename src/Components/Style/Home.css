@@ -1,7 +1,7 @@
 :root{
     --bg-color: #fdfdfd;
     --text-color: #fdfdfd;
-    --main-color: #112e42;
+    --main-color: black;
     --white-color: #fdfdfd;
     --shadow-color: rgba(0, 0, 0, .2);
 }
@@ -50,7 +50,7 @@
     height: 0;
     border-top: 384px solid var(--main-color);
     border-left: 384px solid transparent;
-    border-right: 284px solid var(--main-color);
+    border-right: 400px solid var(--main-color);
     border-bottom: 384px solid var(--main-color);
 
 }
@@ -68,6 +68,9 @@
         border-right: 184px solid var(--main-color);
         border-bottom: 384px solid var(--main-color);
 }
+#profileImage{
+    display: none;
+}
 }
 
 @media (max-width:450px) {
@@ -79,9 +82,11 @@
         height: 0;
         border-top: 384px solid var(--main-color);
         border-left: 384px solid transparent;
-        border-right: 90px solid var(--main-color);
+        border-right: 50% solid var(--main-color);
         border-bottom: 384px solid var(--main-color);
 }
+
+
 }
 /*For the Myproject file*/
 .flex:hover{
