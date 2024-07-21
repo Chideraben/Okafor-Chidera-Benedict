@@ -1,40 +1,10 @@
 import React ,{ useState }from 'react';
-import emailjs from 'emailjs-com'
 export default function Contact() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [number, setNumber] = useState("");
   const [message, setMessage] = useState("");
 
-  
-
-  const handleSubmit = (e)=>{
-    e.preventDefault();
-
-    const templateParems = {
-      from_name: name,
-      from_email: email,
-      from_number: number,
-      message: message,
-    };
-
-    emailjs.send('service_jx4uiw7',
-      'template_tt5l4m3', templateParems, 'sp0HUXMg7kFba57Kd'
-    )
-    .then((response) => {
-      console.log('SUCCESS!', response.status, response.text);
-      alert("Message Sent!!");
-    }, (err) => {
-      console.log('FAILED...',err);
-      alert(err)
-    });
-
-    //Clear the form after sending
-    setName("");
-    setEmail("");
-    setMessage("");
-    setNumber("");
-  }
 
   return (
     <div className='flex flex-col justify-center items-center h-[100vh]' id='contact'>
@@ -42,7 +12,7 @@ export default function Contact() {
             Contact Me
           </h3>
           
-        <form className=' w-full   grid place-items-center py-10' onSubmit={handleSubmit}>
+        <form className=' w-full   grid place-items-center py-10' >
           <div className='flex justify-center items-center gap-3 flex-col px-3'>
             <div className='w-full flex gap-2 flex-wrap sm:flex sm:flex-nowrap md:flex md:flex-nowrap'>
               <input
