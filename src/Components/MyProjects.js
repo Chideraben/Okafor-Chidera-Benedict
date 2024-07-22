@@ -26,6 +26,7 @@ export default function MyProjects() {
         ,
         {
             head: "Simple Calculator",
+            link: 'https://calculator-chideraben.Vercel.app',
             image: amazon,
             title: 'This is Amazon cloned with React.js', 
         },
