@@ -70,36 +70,34 @@ export default function Profile() {
       {/*Introduction*/}
       <div className='flex flex-wrap w-full gap-9 justify-around items-center absolute'>
         <motion.div
-        initial={{opacity: 0, scale: 0, x: 500}}
-        whileInView = {{opacity: 1, scale: 1, x: 0}}
+        initial={{opacity: 0, scale: 0, y: 200}}
+        whileInView = {{opacity: 1, scale: 1, y: 0}}
         transition = {{duration: 0.6}}
         
         className='grid gap-2 max-w-96 ' >
            <h1 className=' text-3xl font-bold '>Hello,I am</h1>
           <h1 className=' text-5xl font-bold text-wrap h-[100px]'>{text}</h1>
           {/*<p className=' text-lg font-sans font-bold border-b-2 border-b-[#64b3d8] text-[#64b3d8]'>Turning ideas into real life products is my calling.</p>*/}
-          <Text className=' text-xs font-bold ' id='animate' transition='transform 0.5s, opacity 0.5s'
-           transform={isvisible ? 'translateY(0)' : 'translateY(100px)'} opacity={isvisible ? 1 : 0 }
-          >I enjoy building everything from small business sites to rich interactive web apps, if you own a business seeking a web developer or an employer looking to hire,you can get in touch with me here.</Text>
+          <Text className=' text-xs font-bold '>I enjoy building everything from small business sites to rich interactive web apps, if you own a business seeking a web developer or an employer looking to hire,you can get in touch with me here.</Text>
 
           <ul className='inline-flex gap-2'>
             <li className='flex justify-center items-center text-[green] w-[3rem] h-[3rem] text-2xl bg-[transparent] rounded-[50%] shadow-xl hover:bg-[lightgreen] hover:text-[#fdfdfd]  shadow-[#00000060] border-2 border-[#0c0c0c]'>
-              <Link>
+              <Link to='https://wa.me/message/7F2SR4SNHDDFG1'>
                 <FaWhatsapp/>
               </Link>
             </li>
             <li className='flex justify-center items-center w-[3rem] h-[3rem] bg-[transparent] text-2xl rounded-[50%] shadow-xl hover:bg-[gray] hover:text-[lightgray]  shadow-[#00000060] border-2 border-[#0c0c0c]'>
-              <Link>
+              <Link to='https://github.com/Chideraben'>
                 <FaGithub/>
               </Link>
             </li>
             <li className='flex justify-center items-center w-[3rem] h-[3rem] bg-[transparent] text-2xl rounded-[50%] shadow-xl hover:bg-[skyblue] hover:text-[#fdfdfd] shadow-[#00000060] border-2 border-[#0c0c0c]'>
-              <Link>
+              <Link to='https://x.com/benedic51298511?s=21'>
                 <FaTwitter/>
               </Link>
             </li>
             <li className='flex justify-center items-center w-[3rem] h-[3rem] bg-[transparent] text-2xl rounded-[50%] shadow-xl hover:bg-[#754ef9] hover:text-[#fdfdfd] shadow-[#00000060] border-2 border-[#0c0c0c]'>
-              <Link>
+              <Link to='https://www.linkdin.com/in/benedict-okafor-0382522b1'>
                 <FaLinkedinIn/>
               </Link>
             </li>

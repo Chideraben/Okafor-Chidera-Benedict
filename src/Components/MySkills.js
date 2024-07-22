@@ -42,7 +42,7 @@ export default function MySkills() {
 
 const icon = {
   icons:[
-    {src:IoLogoHtml5, name: 'HTML', style:{color: ' #c2410c' }},
+    {src:IoLogoHtml5, name: 'HTML', style:{color: '#c2410c' }},
     {src:IoLogoCss3, name: 'CSS3', style:{color:'#3b82f6'}},
     {src:SiJavascript, name: 'JavaScript', style:{color:'yellow',background: ' black'}},
     {src:FaReact, name: 'REACT', style:{color:'#38bdf8'}},
@@ -53,13 +53,12 @@ const icon = {
 
 
   return (
-  <Box as='Center' bg='black' spacing={8} p={8} flexDirection=' column' position='relative' height='100vh' id='skills' >
-    <Box>
-      <Text fontSize='2xl' mb={4} fontWeight='bold' align='center'>
+  <Box bg='black'  align='center' spacing={8} p={8} position='relative' height='100vh' id='skills' >
+    <Center h='100%' flexDirection='column' bg='lightgray' width='100%'>
+      <Text fontSize='2xl'  fontWeight='bold' align='center'>
         My Skill
       </Text>
-      
-        <Flex justify='start' overflow='hidden' align='center' gap='7' padding='5' width='550px' height='100%' >
+        <Flex justify='start' overflow='hidden' align='center' gap='7' padding='5' width='100%' maxWidth='700px' height='100%' >
 
           <Swiper 
            spaceBetween={30}
@@ -75,23 +74,20 @@ const icon = {
            modules={[Autoplay, Pagination, Navigation]}
            onAutoplayTimeLeft={onAutoplayTimeLeft}
           
-          
           >
             <SwiperSlide>
-              <Stack bg='lightgray' width='500px' >
-                <Center spacing={4} p='20px' width='500px'  >
+              <Stack bg='lightgray' width='100%'>
+                <Center spacing={4} p='20px'>
                   <SimpleGrid columns={3} spacing={4} boxShadow='md' >
                     {icon.icons.map((skill) => {
                     return(
-                    <Box key={skill.name} borderRadius='md' boxShadow='md' >
-                      <Box boxSize='100px'  bg='lightgray'>
-                        <Flex width='100%' height='100%' display='flex' alignItems=' center' justify=' center' fontSize='60px'>
+                    <Box key={skill.name}  align='center' borderRadius='md' boxShadow='lg' >
+                      <Box boxSize='100px'  bg='lightgray' width='100%'   align=' center' justify=' center' fontSize={{base: '50px', sm: '50px', md: '50px',lg: '60px'}}>
                           <Icon as={skill.src} style={skill.style}/>
-                        </Flex>
                       </Box>
 
                       <Box>
-                        <Text>{skill.name}</Text>
+                        <Text fontSize={['sm', 'md','lg']}>{skill.name}</Text>
                       </Box>
                     </Box>
                     )
@@ -102,19 +98,19 @@ const icon = {
             </SwiperSlide>
 
             <SwiperSlide>
-              <Stack spacing={4}  width='500px'>
-                <Center gap='4' p='20px' bg='lightgray' flexDirection='column' >
-                  <Text fontSize='xl' mb='5px' fontWeight='bold'>
+              <Stack spacing={4}  width='100%'>
+                <Center gap='4' p='30px' bg='lightgray' flexDirection='column' >
+                  <Text fontSize='xl' mb='8px' fontWeight='bold' textAlign='start' width='100%'>
                     Coding Skills
                   </Text>
                   {skills.coding.map((skill) => {
                     return(
-                    <Box key={skill.name} width='500px'>
+                    <Box key={skill.name} width='100%'>
                       <Flex justify='space-between'>
                         <Text>{skill.name}</Text>
                         <Text>{skill.level}%</Text>
                       </Flex>
-                      <Box width=' 100%' height='10px'>
+                      <Box width='100%' height='10px'>
                         <Text width={skill.width} bg='red'></Text>
                       </Box>
                       <Progress value={90} colorScheme='green'/>
@@ -126,14 +122,14 @@ const icon = {
             </SwiperSlide>
 
             <SwiperSlide>
-              <Stack spacing={4}  width='500px'>
-                <Center gap='4'  bg='lightgray' flexDirection='column' >
-                  <Text fontSize='xl' mb='5px' fontWeight='bold'>
+              <Stack spacing={4}  width='100%'>
+                <Center gap='4' p='30px' bg='lightgray' flexDirection='column' >
+                  <Text fontSize='xl' mb='8px' fontWeight='bold' width='100%' textAlign='start'>
                     Professional Skills
                   </Text>
                   {skills.professional.map((skill) => {
                     return(
-                    <Box key={skill.name} width='500px' p='10px'>
+                    <Box key={skill.name} width='100%'>
                       <Flex justify='space-between'>
                         <Text>{skill.name}</Text>
                         <Text>{skill.level}%</Text>
@@ -178,7 +174,7 @@ const icon = {
        
         
         
-    </Box>  
+    </Center>  
   </Box>
   )
 }
