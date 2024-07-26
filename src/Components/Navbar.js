@@ -38,35 +38,9 @@ function Navbar({toggleDarkMode, darkMode}){
           </div>
           {/* Desktop Menu */}
           <Box >
-            <UnorderedList className='hidden font-medium items-center md:flex space-x-8  text-base'>
-              <ListItem listStyleType='none' style={{fontFamily: ' "Varela Round", sans-serif'}} onClick={()=>{scrollToSection('home')}} className='text-[#00b7ff] animate-bounce before:absolute before:w-full before:h-[2px] before:mt-6 relative before:bg-[#10132e] hover:text-[#1C34FF] hover:origin-right  hover:translate-y-1 hover:scale-110 duration-700  hover:border-b-2 '>
-                <Link to='/'>
-                  Home
-                </Link>
-              </ListItem>
-
-
-              <ListItem listStyleType='none' style={{fontFamily: ' "Varela Round", sans-serif'}} onClick={()=>{scrollToSection('skills')}} className=''>
-                <Link to='/skill' className=' text-[gray] font-semiBold text-base  hover:scale-110' >
-                  Skills
-                </Link>
-              </ListItem>
-
-              <ListItem listStyleType='none' style={{fontFamily: ' "Varela Round", sans-serif'}} onClick={()=>{scrollToSection('projects')}} className='text-[#c2c9c5] font-normal text-base font-[sans-serif]  hover:scale-110 '>
-                <Link to='/projects' className='text-[gray] font-semiBold text-base hover:scale-110' >
-                  Projects
-                </Link>
-              </ListItem>
-
-              <ListItem listStyleType='none' id='Theme' style={{fontFamily: ' "Varela Round", sans-serif'}} onClick={()=>{scrollToSection('contact')}} className='text-[#c2c9c5] font-normal text-base font-[sans-serif] hover:scale-110'>
-                <Link to='/contact' className='text-[gray] font-semiBold text-base font-serif hover:scale-110' >
-                  Contact
-                </Link>
-              </ListItem>
-              <Button onClick={(toggleDarkMode)} fontSize='30px'>
+          <Button onClick={(toggleDarkMode)} fontSize='30px'>
                  {!darkMode ? (<CiLight />) : (<CiDark className='text-black '/>)}
               </Button>
-            </UnorderedList>
             
           </Box>
           

@@ -2,9 +2,8 @@ import React, { useEffect, useState ,useCallback} from 'react'
 import Image from './Images/ProfilePic.jpg'
 import './Style/Home.css'
 import { FaGithub, FaLinkedin, FaRegGrinTears, FaTwitter, FaWhatsapp } from 'react-icons/fa';
-import {Link} from 'react-router-dom'
 import { FaLinkedinIn } from 'react-icons/fa';
-import { Text } from '@chakra-ui/react';
+import { Text, Box, Flex, Stack, Button ,Center, Link} from '@chakra-ui/react';
 import {motion} from 'framer-motion';
 
 export default function Profile() {
@@ -66,79 +65,54 @@ export default function Profile() {
     return ()=> {clearInterval(ticker)}
   },[delta,tick])
   return (
-    <div className='home flex justify-end  items-center h-[100vh]' id='home'>
+    <div className='home justify-end  items-start h-[100vh]' id='home'>
       {/*Introduction*/}
-      <div className='flex flex-wrap w-full gap-9 justify-around items-center absolute'>
-        <motion.div
-        initial={{opacity: 0, scale: 0, y: 200}}
-        whileInView = {{opacity: 1, scale: 1, y: 0}}
-        transition = {{duration: 0.6}}
-        
-        className='grid gap-2 max-w-96 ' >
-           <h1 className=' text-3xl font-bold '>Hello,I am</h1>
-          <h1 className=' text-5xl font-bold text-wrap h-[100px]'>{text}</h1>
+      <Box p='25px' className='w-full gap-9 justify-start  flex items-center h-96 bg-[#cffafe]' >
+        <motion.Box
+        initial={{opacity: 0, translateY: 0, y: 200}}
+        whileInView = {{opacity: 1, translateY: 1, y: 0}}
+        transition = {{duration: 0.9}}
+        className='grid gap-6 max-w-96' >
+           <Text fontSize='semiBold' className=' text-xl ' style={{fontFamily: '"Changa" , sans-serif'}}>Hello,I am</Text>
+          <Text color='#14b8a6' lineHeight={5} style={{fontFamily: '"Changa" , sans-serif'}} className=' text-4xl font-bold text-wrap'>{text}</Text>
           {/*<p className=' text-lg font-sans font-bold border-b-2 border-b-[#64b3d8] text-[#64b3d8]'>Turning ideas into real life products is my calling.</p>*/}
-          <Text className=' text-xs font-bold '>I enjoy building everything from small business sites to rich interactive web apps, if you own a business seeking a web developer or an employer looking to hire,you can get in touch with me here.</Text>
+          <Text maxW={80} className=' text-xs font-medium' style={{fontFamily: '"Varelo" , sans-serif'}}>I enjoy building everything from small business sites to rich interactive web apps, if you own a business seeking a web developer or an employer looking to hire,you can get in touch with me here.</Text>
 
+          <Stack direction='row' spacing={4}>
+            <Button  bg='#14b8a6' p='2' variant='solid'  color='white' borderRadius={3}>
+              <Link href='https://chiderabenedict04@gmail.com'>CONTACT ME</Link>
+            </Button>
+            <Button bg='#14b8a6' variant='solid' p='2' color='white' borderRadius={3}>MY RESUME</Button>
+          </Stack>
           <ul className='inline-flex gap-2'>
-            <li className='flex justify-center items-center text-[green] w-[3rem] h-[3rem] text-2xl bg-[transparent] rounded-[50%] shadow-xl hover:bg-[lightgreen] hover:text-[#fdfdfd]  shadow-[#00000060] border-2 border-[#0c0c0c]'>
-              <Link to='https://wa.me/message/7F2SR4SNHDDFG1'>
+            <li className='flex justify-center items-center text-[green] w-[2.5rem] h-[2.5rem] text-2xl bg-[transparent] rounded-[50%] shadow-xl hover:bg-[lightgreen] hover:text-[#fdfdfd]  shadow-[#00000060] border-2 border-[#0c0c0c]'>
+              <Link href='https://wa.me/message/7F2SR4SNHDDFG1'>
                 <FaWhatsapp/>
               </Link>
             </li>
-            <li className='flex justify-center items-center w-[3rem] h-[3rem] bg-[transparent] text-2xl rounded-[50%] shadow-xl hover:bg-[gray] hover:text-[lightgray]  shadow-[#00000060] border-2 border-[#0c0c0c]'>
-              <Link to='https://github.com/Chideraben'>
+            <li className='flex justify-center items-center w-[2.5rem] h-[2.5rem] bg-[transparent] text-2xl rounded-[50%] shadow-xl hover:bg-[gray] hover:text-[white]  shadow-[#00000060] border-2 border-[#0c0c0c]'>
+              <Link href='https://github.com/Chideraben'>
                 <FaGithub/>
               </Link>
             </li>
-            <li className='flex justify-center items-center w-[3rem] h-[3rem] bg-[transparent] text-2xl rounded-[50%] shadow-xl hover:bg-[skyblue] hover:text-[#fdfdfd] shadow-[#00000060] border-2 border-[#0c0c0c]'>
-              <Link to='https://x.com/benedic51298511?s=21'>
+            <li className='flex justify-center items-center w-[2.5rem] h-[2.5rem] bg-[transparent] text-2xl rounded-[50%] shadow-xl hover:bg-[skyblue] hover:text-[#fdfdfd] shadow-[#00000060] border-2 border-[#0c0c0c]'>
+              <Link href='https://x.com/benedic51298511?s=21'>
                 <FaTwitter/>
               </Link>
             </li>
-            <li className='flex justify-center items-center w-[3rem] h-[3rem] bg-[transparent] text-2xl rounded-[50%] shadow-xl hover:bg-[#754ef9] hover:text-[#fdfdfd] shadow-[#00000060] border-2 border-[#0c0c0c]'>
-              <Link to='https://www.linkdin.com/in/benedict-okafor-0382522b1'>
+            <li className='flex justify-center items-center w-[2.5rem] h-[2.5rem] bg-[transparent] text-2xl rounded-[50%] shadow-xl hover:bg-[#0284c7] hover:text-[#fdfdfd] shadow-[#00000060] border-2 border-[#0c0c0c]'>
+              <Link href='https://www.linkdin.com/in/benedict-okafor-0382522b1'>
                 <FaLinkedinIn/>
               </Link>
             </li>
           </ul>
-        </motion.div>
+        </motion.Box>
          
-          <div  className=' rounded-[100%] overflow-hidden hidden xs:block md:block sm:block'>
-            <img src={Image} alt='' className='w-[300px] h-[300px] rounded-[50%] ' id='profileImage'></img>
-          </div>
-      </div>
-
-          {/*My photo*/}
-      <div className='image-bg '>
-        <div className='overlay'>
-                  
-        </div>        
-
-       {/* <div className='image-parent flex justify-center items-center w-[20px] h-[20px] absolute'>
-          <div className='icon-display' style={{'--i': 4}}>
-            <h3 className=''>Web Developer</h3>
-          </div>
-
-          <div className='icon-display' style={{'--i': 3}}>
-            <h3 className=''>Graphice designer</h3>
-          </div>
-
-          <div className='icon-display' style={{'--i': 2}}>
-            <h3 className=''>Web designer</h3>
-          </div>
-
-          <div className='icon-display' style={{'--i': 1}}>
-            <h3 className=''>Programmer</h3>
-          </div>
-
-          <div className='circle'></div>
-        </div>
-          */}
-        
-      </div>
-
-      
+       
+      </Box>
+      <Center  className=' rounded-[100%] overflow-hidden hidden xs:block md:block sm:block'>
+        <img src={Image} alt='' className='w-[300px] h-[300px] rounded-[50%] ' id='profileImage'></img>
+      </Center>
     </div>
   )
 }

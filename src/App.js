@@ -8,6 +8,9 @@ import Contact from './Components/Contact';
 import MySkills from './Components/MySkills';
 import {BrowserRouter as Router, Routes , Route, Navigate} from 'react-router-dom'
 import Footer from './Components/Footer'
+import Service from './Components/Service';
+import Nav from './Components/Nav';
+
 function App() {
   const [darkMode, setDarkMode] = useState(false);
 
@@ -16,20 +19,19 @@ function App() {
   };
   return (
     <main className={darkMode ? 'dark-mode' : 'app'}>
-      <Router>
+     
+              <Nav/>
+
         <Navbar 
         darkMode={darkMode}
         toggleDarkMode={toggleDarkMode}/>
         <Home/>
+        <Service/>
         <MySkills/>
         <MyProjects  />
         <Contact />
         <Footer/>
-        <Routes>
-          <Route 
-         />
-        </Routes>
-      </Router>
+        
     </main>
   );
 }

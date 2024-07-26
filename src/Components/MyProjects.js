@@ -3,6 +3,7 @@ import amazon from './Images/AmazonProjectImage.jpg'
 import {Box, Text, Flex, SimpleGrid, Button, Link } from '@chakra-ui/react'
 import './Style/Project.css'
 import { FiExternalLink } from 'react-icons/fi'
+import {motion} from 'framer-motion'
 export default function MyProjects() {
     
     const ProjectList = [
@@ -46,16 +47,21 @@ export default function MyProjects() {
     ]
   return (
     <Box as='center' width='100%' gap={9} justify='center' align='center' h='100%' id='projects'>
-        <Text fontSize='lg' fontWeight='bold' className='font-bold text-2xl'>My <Box as='span' color='#0066ff'>Project</Box></Text>
-        <SimpleGrid columns={[1,2,3]}  spacing={0} placeItems='center'  gap={7}>
+        <Text fontSize='lg' fontWeight='bold' className='font-bold text-2xl'>My <Box as='span' color=''>Featured Projects</Box></Text>
+        <SimpleGrid columns={[1,2,3]} w='100%' spacing={0} placeItems='center'  gap={7}>
             {ProjectList.map((projects,index) => (
-            <Box key={index} className='flex justify-center overflow-hidden bg-[lightgray] flex-wrap flex-col shadow-[black] shadow-2xl w-[20rem] rounded-[1rem]' id='color'>
+            <motion.Box 
+            initial={{opacity: 0, translateY: 0, y: 200}}
+            whileInView = {{opacity: 1, translateY: 1, y: 0}}
+            transition = {{duration: 0.9}}
+
+            key={index} className='flex justify-center overflow-hidden shadow-xl flex-col flex-wrap maxW-[20rem] rounded-[1rem]'  id='color'>
                 <Box  className='flex justify-between px-3 items-center pt-5'>
                     <Box className='flex flex-col'>
-                        <Text className='text-base font-serif font-base text-[#0066ff]'>{projects.head}</Text>
+                        <Text className='text-base font-serif font-base text-[#14b8a6]'>{projects.head}</Text>
                         <Text className='text-sm'>{projects.tools}</Text>
                     </Box>
-                    <Button width='4rem' gap='3px' className='bg-[#0066ff]  h-7 rounded-[20px] text-center font-thin text-[#ece4e4fa]'>
+                    <Button width='4rem' gap='3px' className='bg-[#14b8a6]  h-7 rounded-[20px] text-center font-thin text-[#ece4e4fa]'>
                         <Link href={projects.link}>Visit </Link><FiExternalLink/>
                     </Button>
                 </Box>
@@ -65,7 +71,7 @@ export default function MyProjects() {
                 </Box>
 
            
-            </Box>
+            </motion.Box>
     
           )) }
         </SimpleGrid>
