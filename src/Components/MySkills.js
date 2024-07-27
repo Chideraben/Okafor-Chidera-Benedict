@@ -5,7 +5,6 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
-import './Style/Project.css';
 // import required modules
 import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 import {Box, Flex, Progress, Icon, SimpleGrid,Image, Text, VStack, HStack,Stack, Heading, Center, Wrap, WrapItem, background, position} from '@chakra-ui/react'
@@ -82,13 +81,12 @@ const icon = {
                     {icon.icons.map((skill) => {
                     return(
                     <Box key={skill.name}  align='center' borderRadius='md' boxShadow='lg' >
-                      <Box boxSize='100px'  bg='lightgray' width='100%'   align=' center' justify=' center' fontSize={{base: '50px', sm: '50px', md: '50px',lg: '60px'}}>
+                      <Box as='flex' boxSize='100px'  bg='white' width='100%'   align=' center' justify=' center' fontSize={{base: '50px', sm: '50px', md: '50px',lg: '60px'}}>
                           <Icon as={skill.src} style={skill.style}/>
+                          <Text fontSize={['sm', 'md','lg']}>{skill.name}</Text>
+
                       </Box>
 
-                      <Box>
-                        <Text fontSize={['sm', 'md','lg']}>{skill.name}</Text>
-                      </Box>
                     </Box>
                     )
                     })}

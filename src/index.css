@@ -9,9 +9,8 @@
 }
 
 .dark-mode{
-    background-color: rgba(46, 43, 43, 0.904);
+    background-color: black;
     transition: background-color 0.5s;
-    color: #fdfdfd;
 }
 .dark-mode #color{
    

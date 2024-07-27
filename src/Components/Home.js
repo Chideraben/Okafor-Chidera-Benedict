@@ -1,6 +1,5 @@
 import React, { useEffect, useState ,useCallback} from 'react'
 import Image from './Images/ProfilePic.jpg'
-import './Style/Home.css'
 import { FaGithub, FaLinkedin, FaRegGrinTears, FaTwitter, FaWhatsapp } from 'react-icons/fa';
 import { FaLinkedinIn } from 'react-icons/fa';
 import { Text, Box, Flex, Stack, Button ,Center, Link} from '@chakra-ui/react';
@@ -73,16 +72,16 @@ export default function Profile() {
         whileInView = {{opacity: 1, translateY: 1, y: 0}}
         transition = {{duration: 0.9}}
         className='grid gap-6 max-w-96' >
-           <Text fontSize='semiBold' className=' text-xl ' style={{fontFamily: '"Changa" , sans-serif'}}>Hello,I am</Text>
-          <Text color='#14b8a6' lineHeight={5} style={{fontFamily: '"Changa" , sans-serif'}} className=' text-4xl font-bold text-wrap'>{text}</Text>
+           <Text fontSize='xl' fontWeight='bold'  style={{fontFamily: '"Changa" , sans-serif'}}>Hello,I am</Text>
+          <Text color='#14b8a6' lineHeight={8} style={{fontFamily: '"Changa" , sans-serif'}} className=' text-4xl font-bold text-wrap'>{text}</Text>
           {/*<p className=' text-lg font-sans font-bold border-b-2 border-b-[#64b3d8] text-[#64b3d8]'>Turning ideas into real life products is my calling.</p>*/}
-          <Text maxW={80} className=' text-xs font-medium' style={{fontFamily: '"Varelo" , sans-serif'}}>I enjoy building everything from small business sites to rich interactive web apps, if you own a business seeking a web developer or an employer looking to hire,you can get in touch with me here.</Text>
+          <Text maxW={80} fontWeight='600' fontSize='12px' style={{fontFamily: 'Signika" , sans-serif'}}>I enjoy building everything from small business sites to rich interactive web apps, if you own a business seeking a web developer or an employer looking to hire,you can get in touch with me here.</Text>
 
           <Stack direction='row' spacing={4}>
-            <Button  bg='#14b8a6' p='2' variant='solid'  color='white' borderRadius={3}>
-              <Link href='https://chiderabenedict04@gmail.com'>CONTACT ME</Link>
-            </Button>
-            <Button bg='#14b8a6' variant='solid' p='2' color='white' borderRadius={3}>MY RESUME</Button>
+            <Button  bg='#14b8a6' p='2' variant='solid'  fontSize='sm' color='white'  borderRadius={6}>
+              <Link href='https://chiderabenedict04@gmail.com' style={{fontFamily: '"Signika" , sans-serif'}}>CONTACT ME</Link>
+            </Button> 
+            <Button bg='#14b8a6' variant='solid' p='2' fontSize='sm' color='white' style={{fontFamily: '"Changa" , sans-serif'}} borderRadius={3}>MY RESUME</Button>
           </Stack>
           <ul className='inline-flex gap-2'>
             <li className='flex justify-center items-center text-[green] w-[2.5rem] h-[2.5rem] text-2xl bg-[transparent] rounded-[50%] shadow-xl hover:bg-[lightgreen] hover:text-[#fdfdfd]  shadow-[#00000060] border-2 border-[#0c0c0c]'>

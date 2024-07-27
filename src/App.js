@@ -1,6 +1,6 @@
 import './index.css';
 import React, {useState} from 'react'
-import Navbar from './Components/Navbar'
+import ToggleSwitch from './Components/ToggleSwitch'
 import Home from './Components/Home';
 import About from './Components/About'
 import MyProjects from './Components/MyProjects';
@@ -9,7 +9,7 @@ import MySkills from './Components/MySkills';
 import {BrowserRouter as Router, Routes , Route, Navigate} from 'react-router-dom'
 import Footer from './Components/Footer'
 import Service from './Components/Service';
-import Nav from './Components/Nav';
+import Navbar from './Components/Navbar';
 
 function App() {
   const [darkMode, setDarkMode] = useState(false);
@@ -20,9 +20,9 @@ function App() {
   return (
     <main className={darkMode ? 'dark-mode' : 'app'}>
      
-              <Nav/>
+             
 
-        <Navbar 
+        <ToggleSwitch 
         darkMode={darkMode}
         toggleDarkMode={toggleDarkMode}/>
         <Home/>
@@ -31,7 +31,7 @@ function App() {
         <MyProjects  />
         <Contact />
         <Footer/>
-        
+         <Navbar/>
     </main>
   );
 }

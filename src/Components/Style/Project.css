@@ -1,9 +1,0 @@
-.flex:hover{
-    transition: .5s ease;
-}
-#scale{
-    transition: .5s ease;
-}
-#scale:hover{
-    transform: scale(1.1);
-}
