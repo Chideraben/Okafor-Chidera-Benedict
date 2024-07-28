@@ -20,7 +20,7 @@ function Navbar({toggleDarkMode, darkMode}){
           {/* Desktop Menu */}
           <Box >
           <Button onClick={(toggleDarkMode)} fontSize='30px'>
-                 {!darkMode ? (<CiLight color='white' />) : (<CiDark className='text-black '/>)}
+                 {!darkMode ? (<CiLight color='black' />) : (<CiDark color="white"/>)}
               </Button>
             
           </Box>
