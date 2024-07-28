@@ -1,7 +1,7 @@
 import {useState, useEffect } from 'react';
 import {CiLight} from "react-icons/ci"
 import {CiDark} from "react-icons/ci"
-import {Progress , Flex , Box, Text, Button, UnorderedList, ListItem, Link} from '@chakra-ui/react';
+import { Box, Text, Button} from '@chakra-ui/react';
 function Navbar({toggleDarkMode, darkMode}){
   const [isOpen, setIsOpen] = useState(false);
 
@@ -13,14 +13,14 @@ function Navbar({toggleDarkMode, darkMode}){
         <div className='flex justify-between items-center h-16'>
           {/* Logo */}
           <div className='flex-shrink-0'>
-            <p className='font-bold text-2xl text-[#50319e] cursor-pointer'>
-              Benedict
-            </p>
+            <Text textShadow='2px 2px #14b8a6' fontWeight='bold' fontSize='2xl' color='#50319e ' cursor='pointer'>
+              WEB<Text as='span' color=' #14b8a6' >DEV</Text>
+            </Text>
           </div>
           {/* Desktop Menu */}
           <Box >
           <Button onClick={(toggleDarkMode)} fontSize='30px'>
-                 {!darkMode ? (<CiLight />) : (<CiDark className='text-black '/>)}
+                 {!darkMode ? (<CiLight color='white' />) : (<CiDark className='text-black '/>)}
               </Button>
             
           </Box>

@@ -27,20 +27,21 @@ export default function Nav() {
   }
   return (
     <Box p={2}
-      bottom={10}
+      bottom={0}
       width='100%'
       position='fixed'
       bg='transparent'
       zIndex='1000'
-      
-
     >
       <Center>
         <Flex 
           gap='9'
-          bg='#082f49'
+          bg='#082f49d7'
           p={3}
-          borderRadius='30px'
+          borderRadius='30px'     
+          backdropFilter="auto"
+          backdropConstrast= '60%'
+         className=  'text-[#082f49d7]'  
         >
        
             <IconButton 

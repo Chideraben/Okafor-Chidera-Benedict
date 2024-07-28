@@ -11,15 +11,17 @@ export default function Footer() {
       });
     };
   return (
-    <Box background='#14b8a6' justifyContent='center' h='120px' w='100%'>
-      <Center>
-        <Flex align='center' flexDirection='colume'>
-          <Button onClick={scrollToTop} boxSize='50px'>
-            {<FaArrowUpLong/>}
+    <Box background='#14b8a6' align='center' justify='center' h='150px' w='100%'>
+      
+        <Box flexDirection='colume'>
+          <Button leftIcon={<FaArrowUpLong />} color='white' onClick={scrollToTop} boxSize='50px'>
+             Back To Top
           </Button>
-          <Text>(c) All rights reserved, Benedict Chidera 2024. </Text>
-        </Flex>
-      </Center>
+          <Text>
+            (c) All rights reserved, Benedict Chidera 2024. 
+          </Text>
+        </Box>
+      
     </Box>
   )
 }

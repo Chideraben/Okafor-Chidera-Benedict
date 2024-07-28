@@ -2,7 +2,6 @@ import './index.css';
 import React, {useState} from 'react'
 import ToggleSwitch from './Components/ToggleSwitch'
 import Home from './Components/Home';
-import About from './Components/About'
 import MyProjects from './Components/MyProjects';
 import Contact from './Components/Contact';
 import MySkills from './Components/MySkills';
@@ -20,8 +19,6 @@ function App() {
   return (
     <main className={darkMode ? 'dark-mode' : 'app'}>
      
-             
-
         <ToggleSwitch 
         darkMode={darkMode}
         toggleDarkMode={toggleDarkMode}/>

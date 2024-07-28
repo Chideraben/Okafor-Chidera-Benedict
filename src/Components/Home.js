@@ -1,5 +1,5 @@
 import React, { useEffect, useState ,useCallback} from 'react'
-import Image from './Images/ProfilePic.jpg'
+import Image from './Images/FaceLeft.jpg' 
 import { FaGithub, FaLinkedin, FaRegGrinTears, FaTwitter, FaWhatsapp } from 'react-icons/fa';
 import { FaLinkedinIn } from 'react-icons/fa';
 import { Text, Box, Flex, Stack, Button ,Center, Link} from '@chakra-ui/react';
@@ -64,9 +64,9 @@ export default function Profile() {
     return ()=> {clearInterval(ticker)}
   },[delta,tick])
   return (
-    <div className='home justify-end  items-start h-[100vh]' id='home'>
+    <Box as='div'  className='home justify-end  items-start h-[100%]' id='home'>
       {/*Introduction*/}
-      <Box p='25px' className='w-full gap-9 justify-start  flex items-center h-96 bg-[#cffafe]' >
+      <Box p='25px' w='100%' className=' gap-9 justify-between  flex items-center h-96 bg-[#cffafe]' >
         <motion.Box
         initial={{opacity: 0, translateY: 0, y: 200}}
         whileInView = {{opacity: 1, translateY: 1, y: 0}}
@@ -74,7 +74,6 @@ export default function Profile() {
         className='grid gap-6 max-w-96' >
            <Text fontSize='xl' fontWeight='bold'  style={{fontFamily: '"Changa" , sans-serif'}}>Hello,I am</Text>
           <Text color='#14b8a6' lineHeight={8} style={{fontFamily: '"Changa" , sans-serif'}} className=' text-4xl font-bold text-wrap'>{text}</Text>
-          {/*<p className=' text-lg font-sans font-bold border-b-2 border-b-[#64b3d8] text-[#64b3d8]'>Turning ideas into real life products is my calling.</p>*/}
           <Text maxW={80} fontWeight='600' fontSize='12px' style={{fontFamily: 'Signika" , sans-serif'}}>I enjoy building everything from small business sites to rich interactive web apps, if you own a business seeking a web developer or an employer looking to hire,you can get in touch with me here.</Text>
 
           <Stack direction='row' spacing={4}>
@@ -107,11 +106,11 @@ export default function Profile() {
           </ul>
         </motion.Box>
          
-       
+     
       </Box>
-      <Center  className=' rounded-[100%] overflow-hidden hidden xs:block md:block sm:block'>
-        <img src={Image} alt='' className='w-[300px] h-[300px] rounded-[50%] ' id='profileImage'></img>
+      <Center h='350px'  overflow='hidden'>
+        <img src={Image} alt='' borderRadius='100%'  className='w-[300px]   ' id='profileImage' />
       </Center>
-    </div>
+    </Box>
   )
 }

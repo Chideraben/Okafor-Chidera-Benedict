@@ -3,6 +3,8 @@
 @tailwind utilities;
 @import url('htpps://fonts.goggleapis.com/css2?family=Varelo+Round&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Changa:wght@200..800&family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Merienda:wght@300..900&family=Signiko:wght@300..700&family=Varela+Round&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Signike:wght@300..700&family=Varela+Rounded&display=swap');
+
 .app{
     transition: background-color 0.5s;
     background-color: white;
@@ -11,7 +13,4 @@
 .dark-mode{
     background-color: black;
     transition: background-color 0.5s;
-}
-.dark-mode #color{
-   
 }

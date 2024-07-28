@@ -1,4 +1,5 @@
 import React ,{ useState }from 'react';
+import { Box , Input , Text, Textarea, Flex, Grid, Button} from '@chakra-ui/react'
 export default function Contact() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -7,15 +8,15 @@ export default function Contact() {
 
 
   return (
-    <div className='flex flex-col justify-center items-center h-[100vh]' id='contact'>
-          <h3 className=' font-bold text-2xl text-center text-[#001c4f] md:text-lg '>
+    <Box className='flex flex-col justify-center items-center h-[100vh]' id='contact'>
+          <Text color='#14b8a6' mb='8px' fontWeight='600'  fontSize='30px' style={{fontFamily: '"Changa" , sans-serif' }} textAlign='center'>
             Contact Me
-          </h3>
+          </Text>
           
-        <form className=' w-full   grid place-items-center py-10' >
-          <div className='flex justify-center items-center gap-3 flex-col px-3'>
-            <div className='w-full flex gap-2 flex-wrap sm:flex sm:flex-nowrap md:flex md:flex-nowrap'>
-              <input
+        <Grid  w='100%' placeItems='center' py='10px' >
+          <Flex justify='center' align='center' flexDirection='column' gap={3} px={3}>
+            <Box className='w-full flex gap-2 flex-wrap sm:flex sm:flex-nowrap md:flex md:flex-nowrap'>
+              <Input
                 className='w-full outline-none h-[50px] border-2 font-semibold text-[#5f5b5b] text-sm bg-[transparent] border-[#BDBDBD] rounded px-4'
                 placeholder='Your Name'
                 type='text'
@@ -24,7 +25,7 @@ export default function Contact() {
                 required
               />
 
-              <input
+              <Input
                 className='w-full outline-none h-[50px] border-2 font-semibold text-[#5f5b5b] text-sm bg-[transparent] border-[#BDBDBD] rounded px-4'
                 placeholder='Your Email'
                 value={email}
@@ -33,35 +34,35 @@ export default function Contact() {
                 required
               />
 
-              <input
-                className='w-full outline-none h-[50px] border-2 text-sm font-semibold text-[#5f5b5b] bg-[transparent] border-[#BDBDBD] rounded px-4'
+              <Input
+                className='w-full outline-none h-[50px] border-2 font-semibold text-[#5f5b5b] text-sm bg-[transparent] border-[#BDBDBD] rounded px-4'               
                 placeholder='Your Phone Number'
                 type='text'
                 value={number}
                 onChange={(e)=>setNumber(e.target.value)}
                 required
               />
-            </div>
+            </Box>
 
            
 
-            <div className='w-full'>
-              <textarea
+            <Box w='100%'>
+              <Textarea
                 className='w-full outline-none resize-none h-[222px] font-bold text-[#5f5b5b] bg-[transparent] text-base  text-start rounded border-2 border-[#BDBDBD] px-4 pt-3'
                 placeholder='Message'
                 value={message}
                 onChange={(e)=>setMessage(e.target.value)}
                 required
               />
-            </div>
+            </Box>
 
-            <div className='w-full '>
-              <button type='sumbit' className='bg-[#1C34FF] w-[120px] h-9 rounded hover:opacity-60 text-[#fdfdfd] text-base font-normal hover:bg-{#1C34FF}'>
+            <Box width='100%'>
+              <Button type='sumbit' bg='#14b8a6' p='8px' borderRadius=' 10px' color='white'>
                 Send Message
-              </button>
-            </div>
-          </div>
-        </form>
-    </div>
+              </Button>
+            </Box>
+          </Flex>
+        </Grid>
+    </Box>
   )
 }

@@ -45,16 +45,16 @@ export default function MyProjects() {
         }
     ]
   return (
-    <Box as='center' width='100%' gap={9} justify='center' align='center' h='100%' id='projects' bg='white'>
-        <Text fontSize='lg' fontWeight='bold' className='font-bold text-2xl'>My <Box as='span' color=''>Featured Projects</Box></Text>
-        <SimpleGrid columns={[1,2,3]} w='100%' p='10px' spacing={0} placeItems='center'  gap={7}>
+    <Box as='center' width='100%' p='10px' gap={90} justify='center' align='center' h='100%' id='projects' bg='white'>
+        <Text  color='#14b8a6' fontWeight='bold' mt='10px' fontSize='30px' style={{fontFamily: '"Changa" , sans-serif' }}>My Featured Projects</Text>
+        <SimpleGrid columns={[1,2,3]} w='100%' px='10px' mt='30px' spacing={0} placeItems='center'  gap={7}>
             {ProjectList.map((projects,index) => (
             <motion.Box 
             initial={{opacity: 0, translateY: 0, y: 200}}
             whileInView = {{opacity: 1, translateY: 1, y: 0}}
             transition = {{duration: 0.9}}
  
-            key={index} className='flex bg-[white] justify-center overflow-hidden shadow-xl flex-col flex-wrap maxW-[20rem] rounded-[1rem]'  id='color'>
+            key={index} className='flex bg-[white] justify-center overflow-hidden shadow-xl flex-col flex-wrap maxW-[15rem] rounded-[1rem]'  id='color'>
                 <Box  className='flex justify-between px-3 items-center pt-5'>
                     <Box className='flex flex-col'>
                         <Text className='text-base font-serif font-base text-[#14b8a6]'>{projects.head}</Text>
