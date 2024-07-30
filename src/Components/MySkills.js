@@ -90,7 +90,7 @@ const icon = {
                       <Text textAlign='start' fontSize='medium'  fontWeight='600' style={{fontFamily: '"Varelo" , sans-serif'}}>{skill.name}</Text>
                       
                     </Box>
-                    )
+                    );
                     })}
                   </Box>
               </Flex>
