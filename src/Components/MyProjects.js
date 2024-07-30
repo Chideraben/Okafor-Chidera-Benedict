@@ -40,8 +40,8 @@ export default function MyProjects() {
             head: "Sneaker Website", 
             image: sneakers,
             title: '', 
-            tools: 'HTML| CSS | JS  '
-            link: 'https://sneakers-ruby.vercel.app/'
+            tools: 'HTML| CSS | JS  ',
+            link: 'https://sneakers-ruby.vercel.app'
         }
     ]
   return (
