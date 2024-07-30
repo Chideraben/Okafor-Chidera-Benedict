@@ -41,8 +41,18 @@ const icon = {
 
 
   return (
+<<<<<<< HEAD
   <Box id='skills'>
     <Center h='100%' flexDirection='column' py={20} px='2' bg='white' width='100%'>
+=======
+  <motion.Box
+    initial={{opacity: 0, translateY: 0, y: 200}}
+    whileInView = {{opacity: 1, translateY: 1, y: 0}}
+    transition = {{duration: 0.9}}
+    id="skills"
+  >
+      <Center h='100%' flexDirection='column' py={20} px='2' bg='white' width='100%'>
+>>>>>>> d5eba9b01b98a7a0a389c3f23a6d40e203d6c7e3
         <Text  fontSize='30px' style={{fontFamily: '"Changa" , sans-serif' }} mb='10px' color='#14b8ab'  fontWeight='bold' align='center'>
           My Skill
         </Text>
