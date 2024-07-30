@@ -42,15 +42,6 @@ export default function MyProjects() {
             title: '', 
             tools: 'HTML| CSS | JS  '
         }
-        ,
-        {
-            image: amazon,
-            title: 'This is Amazon cloned with React.js', 
-        },
-        {
-            image: amazon,
-            title: 'This is Amazon cloned with React.js', 
-        }
     ]
   return (
     <Box as='center' width='100%' p='10px' gap={90} justify='center' align='center' h='100%' id='projects' bg='white'>
