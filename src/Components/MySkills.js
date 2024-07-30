@@ -41,8 +41,8 @@ const icon = {
 
 
   return (
-
-   <Center h='100%' flexDirection='column' py={20} px='2' bg='white' width='100%' id="skills">
+      <Box id="skills">
+       <Center h='100%' flexDirection='column' py={20} px='2' bg='white' width='100%'>
 
      <motion.Box
           initial={{opacity: 0, translateY: 0, y: 200}}
@@ -96,15 +96,11 @@ const icon = {
               </Flex>
           
           
-      </motion.Box>
+         </motion.Box>
 
-       
-        
-        
-  </Center> 
+      </Center> 
 
- 
-     
+     </Box>
   )
 }
 
