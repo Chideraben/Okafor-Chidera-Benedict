@@ -41,16 +41,16 @@ const icon = {
 
 
   return (
-  <motion.Box
-    initial={{opacity: 0, translateY: 0, y: 200}}
-    whileInView = {{opacity: 1, translateY: 1, y: 0}}
-    transition = {{duration: 0.9}}
-  >
-      <Center h='100%' flexDirection='column' py={20} px='2' bg='white' width='100%'>
+  <Box id='skills'>
+    <Center h='100%' flexDirection='column' py={20} px='2' bg='white' width='100%'>
         <Text  fontSize='30px' style={{fontFamily: '"Changa" , sans-serif' }} mb='10px' color='#14b8ab'  fontWeight='bold' align='center'>
           My Skill
         </Text>
-        <Box justify='start' bg='#cffafe' overflow='hidden' align='center' gap='7'  width='100%' maxWidth='700px' height='100%' >     
+      <motion.Box
+          initial={{opacity: 0, translateY: 0, y: 200}}
+          whileInView = {{opacity: 1, translateY: 1, y: 0}}
+          transition = {{duration: 0.9}}
+          style={{justify:'start', backgroundColor:'#cffafe',borderRadius: '10px', overflow:'hidden', align:'center', gap: '7' , width: '100%', maxWidth: '700px', height: '100%'}} >     
               <Flex  width='100%' justify='space-between' >
                 <Box  p='20px' gap={7} display='flex' flexDirection='column'>
                  <Text fontSize='xl'  color='#148ba9'  fontWeight='bold' width='100%' >
@@ -88,14 +88,14 @@ const icon = {
               </Flex>
           
           
-      </Box>
+      </motion.Box>
 
        
         
         
     </Center> 
 
-  </motion.Box>
+  </Box>
      
   )
 }

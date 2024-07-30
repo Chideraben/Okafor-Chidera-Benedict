@@ -11,10 +11,10 @@ export default function Footer() {
       });
     };
   return (
-    <Box background='#14b8a6' align='center' justify='center' h='150px' w='100%'>
+    <Box background='#cffafe' align='center' justify='center' h='150px' w='100%'>
       
         <Box flexDirection='colume'>
-          <Button leftIcon={<FaArrowUpLong />} color='white' onClick={scrollToTop} boxSize='50px'>
+          <Button leftIcon={<FaArrowUpLong />} color='#148ba9' onClick={scrollToTop} boxSize='50px'>
              Back To Top
           </Button>
           <Text>

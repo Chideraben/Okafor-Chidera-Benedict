@@ -1,4 +1,5 @@
 import React ,{ useState }from 'react';
+import {motion} from 'framer-motion'
 import { Box , Input , Text, Textarea, Flex, Grid, Button} from '@chakra-ui/react'
 export default function Contact() {
   const [name, setName] = useState("");
@@ -13,7 +14,11 @@ export default function Contact() {
             Contact Me
           </Text>
           
-        <Grid  w='100%' placeItems='center' py='10px' >
+        <motion.Grid 
+          initial={{opacity: 0, translateY: 0, y: 200}}
+          whileInView = {{opacity: 1, translateY: 1, y: 0}}
+          transition = {{duration: 0.9}}
+          style={{w: '100%', placeItems:'center', py: '10px'}} >
           <Flex justify='center' align='center' flexDirection='column' gap={3} px={3}>
             <Box className='w-full flex gap-2 flex-wrap sm:flex sm:flex-nowrap md:flex md:flex-nowrap'>
               <Input
@@ -62,7 +67,7 @@ export default function Contact() {
               </Button>
             </Box>
           </Flex>
-        </Grid>
+        </motion.Grid>
     </Box>
   )
 }

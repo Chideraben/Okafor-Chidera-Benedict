@@ -1,5 +1,9 @@
 import React from 'react'
 import amazon from './Images/AmazonProjectImage.jpg'
+import snap from './Images/Snap.jpg'
+import calculator from './Images/Calculator.jpg'
+import sneakers from './Images/Sneakers.jpg'
+
 import {Box, Text, Flex, SimpleGrid, Button, Link } from '@chakra-ui/react'
 import { FiExternalLink } from 'react-icons/fi'
 import {motion} from 'framer-motion'
@@ -16,10 +20,10 @@ export default function MyProjects() {
             title: 'This is Amazon cloned built with React.js ', 
         },
         {
-            image: amazon,
-            title: 'This is Landing page website',
+            image: snap,
+            title: '',
             link: 'https://chideraben.github.io/snap-from-FrontEnd-Mentor',
-            tools: 'HTML| CSS |JS' ,
+            tools: 'HTML| CSS | JS' ,
             head: "Landing Page",
             
         }
@@ -27,12 +31,16 @@ export default function MyProjects() {
         {
             head: "Simple Calculator",
             link: 'https://calculator-chideraben.Vercel.app',
-            image: amazon,
-            title: 'This is Amazon cloned with React.js', 
+            image: calculator,
+            title: '', 
+            tools: 'HTML| CSS | JS  '
+
         },
         {
-            image: amazon,
-            title: 'This is Amazon cloned with React.js', 
+            head: "Sneaker Website", 
+            image: sneakers,
+            title: '', 
+            tools: 'HTML| CSS | JS  '
         }
         ,
         {
@@ -57,8 +65,8 @@ export default function MyProjects() {
             key={index} className='flex bg-[white] justify-center overflow-hidden shadow-xl flex-col flex-wrap maxW-[15rem] rounded-[1rem]'  id='color'>
                 <Box  className='flex justify-between px-3 items-center pt-5'>
                     <Box className='flex flex-col'>
-                        <Text className='text-base font-serif font-base text-[#14b8a6]'>{projects.head}</Text>
-                        <Text className='text-sm'>{projects.tools}</Text>
+                        <Text style={{fontFamily: '"Changa" , sans-serif'}} color=' #14b8a6' fontWeight='600'>{projects.head}</Text>
+                        <Text fontSize='small' style={{fontFamily: '"Valera" , sans-serif'}}>{projects.tools}</Text>
                     </Box>
                     <Button width='4rem' gap='3px' className='bg-[#14b8a6]  h-7 rounded-[20px] text-center font-thin text-[#ece4e4fa]'>
                         <Link href={projects.link}>Visit </Link><FiExternalLink/>
