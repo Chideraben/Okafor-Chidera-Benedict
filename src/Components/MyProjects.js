@@ -41,6 +41,7 @@ export default function MyProjects() {
             image: sneakers,
             title: '', 
             tools: 'HTML| CSS | JS  '
+            link: 'https://sneakers-ruby.vercel.app/'
         }
     ]
   return (
