@@ -54,7 +54,7 @@ export default function MyProjects() {
             whileInView = {{opacity: 1, translateY: 1, y: 0}}
             transition = {{duration: 0.9}}
  
-            key={index} className='flex bg-[white] justify-center overflow-hidden shadow-xl flex-col flex-wrap maxW-[15rem] rounded-[1rem]'  id='color'>
+            key={index} className='flex bg-[white] justify-center overflow-hidden shadow-sm flex-col flex-wrap maxW-[15rem] rounded-[1rem]'  id='color'>
                 <Box  className='flex justify-between px-3 items-center pt-5'>
                     <Box className='flex flex-col'>
                         <Text style={{fontFamily: '"Changa" , sans-serif'}} color=' #14b8a6' fontWeight='600'>{projects.head}</Text>
