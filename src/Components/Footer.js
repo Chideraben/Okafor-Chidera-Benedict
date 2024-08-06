@@ -7,7 +7,6 @@ export default function Footer() {
       window.scrollTo({
         top: 0,
         behavior: 'smooth',
-        duration: 0.9,
       });
     };
   return (
