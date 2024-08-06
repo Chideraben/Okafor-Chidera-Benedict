@@ -18,7 +18,7 @@ export default function Footer() {
              Back To Top
           </Button>
           <Text>
-            (c) All rights reserved, Benedict Chidera 2024. 
+            (c) All rights reserved,Okafor Benedict Chidera 2024. 
           </Text>
         </Box>
       

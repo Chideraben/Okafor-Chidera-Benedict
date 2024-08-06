@@ -12,47 +12,37 @@ export default function MySkills() {
 
   const skills = {
     coding: [
-      {name: 'React.js', level: 90, width: 80},
-      {name: 'JavaScript', level: 88},
-      {name: 'CSS', level: 80},
-      {name: 'HTML', level: 78},
+      {name: 'React.js'},
+      {name: 'JavaScript'},
+      {name: 'CSS'},
+      {name: 'HTML'},
   ],
   professional:[
     {name: 'Web Design'},
     {name: 'Web Development'},
     {name: 'Graphic Design'},
-    {name: 'CyberSecurity'},
     {name: 'Chakra-ui '}
 
   ]
 
 };
 
-const icon = {
-  icons:[
+const icon = [
+  
     {src:IoLogoHtml5, name: 'HTML', style:{color: '#c2410c' }},
     {src:IoLogoCss3, name: 'CSS3', style:{color:'#3b82f6'}},
     {src:SiJavascript, name: 'JavaScript', style:{color:'yellow',background: ' black'}},
     {src:FaReact, name: 'REACT', style:{color:'#38bdf8'}},
     {src:FaGitAlt, name: 'Git', style:{color:' #c2410c'}},
     {src:RiTailwindCssFill, name: 'TailWindCss', style:{color:'#38bdf8'}}
-  ]
-}
+  
+]
 
 
   return (
-<<<<<<< HEAD
   <Box id='skills'>
     <Center h='100%' flexDirection='column' py={20} px='2' bg='white' width='100%'>
-=======
-  <motion.Box
-    initial={{opacity: 0, translateY: 0, y: 200}}
-    whileInView = {{opacity: 1, translateY: 1, y: 0}}
-    transition = {{duration: 0.9}}
-    id="skills"
-  >
-      <Center h='100%' flexDirection='column' py={20} px='2' bg='white' width='100%'>
->>>>>>> d5eba9b01b98a7a0a389c3f23a6d40e203d6c7e3
+ 
         <Text  fontSize='30px' style={{fontFamily: '"Changa" , sans-serif' }} mb='10px' color='#14b8ab'  fontWeight='bold' align='center'>
           My Skill
         </Text>
@@ -67,7 +57,7 @@ const icon = {
                     Coding Skills
                   </Text>
                   <SimpleGrid columns={1} >
-                    {icon.icons.map((skill) => {
+                    {icon.map((skill) => {
                     return(
                     <Box key={skill.name}  align='center' mb='10px' >
                       <Flex align='center' gap={2} >

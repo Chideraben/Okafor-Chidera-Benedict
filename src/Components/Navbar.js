@@ -92,16 +92,7 @@ export default function Nav() {
               className=' hover:scale-110' 
             />
              
-            <IconButton 
-              icon={<MdOutlineContactMail/>}
-              style={{fontFamily: ' "Varela Round", sans-serif'}} 
-              onClick={()=>{scrollToSection('contact')}} 
-              _hover={{color: 'white'}}
-              color='white'
-              fontSize='20px'
-              color='#a1a1aa'
-              className=' hover:scale-110' 
-            />
+           
        
         </Flex>
       </Center>
