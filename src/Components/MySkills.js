@@ -40,15 +40,9 @@ const icon = [
 
 
   return (
-<<<<<<< HEAD
   <Box id='skills'>
     <Center h='100%' flexDirection='column' py={20} px='2' bg='white' width='100%'>
  
-=======
-      <Box id="skills">
-       <Center h='100%' flexDirection='column' py={20} px='2' bg='white' width='100%'>
-   
->>>>>>> 32b52588963f70ab692590ee9b0133cfe1900a22
         <Text  fontSize='30px' style={{fontFamily: '"Changa" , sans-serif' }} mb='10px' color='#14b8ab'  fontWeight='bold' align='center'>
           My Skill
         </Text>
@@ -88,17 +82,21 @@ const icon = [
                       <Text textAlign='start' fontSize='medium'  fontWeight='600' style={{fontFamily: '"Varelo" , sans-serif'}}>{skill.name}</Text>
                       
                     </Box>
-                    );
+                    )
                     })}
                   </Box>
               </Flex>
           
           
-         </motion.Box>
+      </motion.Box>
 
-      </Center> 
+       
+        
+        
+    </Center> 
 
-     </Box>
+  </Box>
+     
   )
 }
 
