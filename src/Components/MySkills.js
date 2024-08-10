@@ -1,49 +1,14 @@
 import React, { useRef, useState } from 'react';
 import {Box, Flex, Icon, SimpleGrid, Text, Center} from '@chakra-ui/react'
-import { IoLogoHtml5 } from 'react-icons/io5';
-import { IoLogoCss3 } from 'react-icons/io';
-import { SiJavascript } from 'react-icons/si';
-import { FaReact } from 'react-icons/fa';
-import { FaGitAlt } from 'react-icons/fa6';
-import { RiTailwindCssFill } from 'react-icons/ri';
 import {motion} from 'framer-motion'
+import { SkillIcons, Skills, HeaderStyle} from './Store/ProjectStore'; 
 export default function MySkills() {
- 
-
-  const skills = {
-    coding: [
-      {name: 'React.js'},
-      {name: 'JavaScript'},
-      {name: 'CSS'},
-      {name: 'HTML'},
-  ],
-  professional:[
-    {name: 'Web Design'},
-    {name: 'Web Development'},
-    {name: 'Graphic Design'},
-    {name: 'Chakra-ui '}
-
-  ]
-
-};
-
-const icon = [
-  
-    {src:IoLogoHtml5, name: 'HTML', style:{color: '#c2410c' }},
-    {src:IoLogoCss3, name: 'CSS3', style:{color:'#3b82f6'}},
-    {src:SiJavascript, name: 'JavaScript', style:{color:'yellow',background: ' black'}},
-    {src:FaReact, name: 'REACT', style:{color:'#38bdf8'}},
-    {src:FaGitAlt, name: 'Git', style:{color:' #c2410c'}},
-    {src:RiTailwindCssFill, name: 'TailWindCss', style:{color:'#38bdf8'}}
-  
-]
-
 
   return (
   <Box id='skills'>
     <Center h='100%' flexDirection='column' py={20} px='2' bg='white' width='100%'>
  
-        <Text  fontSize='30px' style={{fontFamily: '"Changa" , sans-serif' }} mb='10px' color='#14b8ab'  fontWeight='bold' align='center'>
+        <Text  fontSize='30px' style={HeaderStyle} mb='10px' color='#14b8ab'  fontWeight='bold' align='center'>
           My Skill
         </Text>
       <motion.Box
@@ -57,7 +22,7 @@ const icon = [
                     Coding Skills
                   </Text>
                   <SimpleGrid columns={1} >
-                    {icon.map((skill) => {
+                    {SkillIcons.map((skill) => {
                     return(
                     <Box key={skill.name}  align='center' mb='10px' >
                       <Flex align='center' gap={2} >
@@ -75,7 +40,7 @@ const icon = [
                     <Text fontSize='xl' color='#148ba9'   fontWeight='bold' width='100%' textAlign='start'>
                       Professional Skills
                     </Text>
-                    {skills.professional.map((skill) => {
+                    {Skills.professional.map((skill) => {
                     return(
                     <Box key={skill.name} width='100%' mb='2px'>
                      

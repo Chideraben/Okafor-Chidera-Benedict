@@ -3,6 +3,7 @@ import React from 'react'
 import {FaCode} from 'react-icons/fa'
 import { IoIosColorPalette } from 'react-icons/io'
 import {motion} from 'framer-motion'
+import { HeaderStyle } from './Store/ProjectStore'
 export default function Service() {
     const MyService = [
         {
@@ -22,7 +23,7 @@ export default function Service() {
         initial={{opacity: 0, translateY: 0, y: 0}}
         whileInView = {{opacity: 1, translateY: -1, y: 15}}
         transition = {{duration: 0.5}}
-        style={{color:'#14b8a6',fontFamily: '"Changa" , sans-serif', fontSize:'30px', fontWeight:'600'}}
+        style={HeaderStyle}
         >
           Services
         </motion.Heading>

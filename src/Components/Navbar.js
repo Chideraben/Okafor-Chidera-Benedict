@@ -1,10 +1,10 @@
 import React ,{useEffect}from 'react'
-import {Box,Center, Flex, Text, VStack, Heading, Avatar, AvatarBadge, ListItem, Link,IconButton , HStack,UnorderedList} from '@chakra-ui/react'
+import {Box,Center, Flex, Text, VStack, Heading, Avatar, AvatarBadge, ListItem, Link,Icon , HStack,UnorderedList} from '@chakra-ui/react'
 import { IoHomeOutline } from 'react-icons/io5'
 import { FaPencilRuler, FaRegListAlt  } from 'react-icons/fa'
-import {VscProject} from 'react-icons/vsc'
 import { AiOutlineFundProjectionScreen } from 'react-icons/ai'
 import { MdOutlineContactMail } from 'react-icons/md'
+import { Navlist } from './Store/ProjectStore' 
 export default function Nav() {
   useEffect(()=>{
     const handleScroll = () => {
@@ -41,59 +41,20 @@ export default function Nav() {
           borderRadius='30px'     
           backdropFilter="auto"
           backdropConstrast= '60%'
-         className=  'text-[#082f49d7]'  
+          className=  'text-[#082f49d7]'  
         >
-       
-            <IconButton 
-              icon={ <IoHomeOutline/>}
-              aria-label='Home' 
-              _active={{color: ' white'}} 
-              _hover={{color: 'white'}} 
-              style={{fontFamily: ' "Varela Round", sans-serif'}} 
-              onClick={()=>{scrollToSection('home')}} 
-              fontSize='20px'
-              color='#a1a1aa'
-              className=' animate-bounce hover:translate-y-1 hover:scale-110 duration-700'
-            />
+          {Navlist.map((nav)=>(
 
-            <IconButton 
-              icon={<FaRegListAlt/>}
-              style={{fontFamily: ' "Varela Round", sans-serif'}} 
-              _hover={{color: 'white'}} 
-              onClick={()=>{scrollToSection('service')}} 
+            <Icon 
+              as={nav.icon}
+              _hover={{color: 'white',scale: '10'}} 
+              onClick={()=>{scrollToSection(nav.onClick)}} 
               fontSize='20px'
               color='#a1a1aa'
-              fontWeight='600'
-              className=' hover:scale-110' 
+              
             />
-                 
-               
-            <IconButton 
-              icon={<FaPencilRuler/>}
-              style={{fontFamily: ' "Varela Round", sans-serif'}} 
-              _hover={{color: 'white'}}
-              onClick={()=>{scrollToSection('skills')}}
-              fontSize='20px'
-              color='#a1a1aa'
-              fontWeight='600'
-              className=' hover:scale-110' 
-            />
-             
-           
-
-            <IconButton 
-              icon={<AiOutlineFundProjectionScreen/>}
-              style={{fontFamily: ' "Varela Round", sans-serif'}} 
-              _hover={{color: 'white'}}
-              onClick={()=>{scrollToSection('projects')}} 
-              fontSize='20px'
-              color='#a1a1aa'
-              fontWeight='600'
-              className=' hover:scale-110' 
-            />
-             
-           
-       
+         
+          ))}
         </Flex>
       </Center>
     </Box>

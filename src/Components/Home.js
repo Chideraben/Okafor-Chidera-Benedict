@@ -4,7 +4,7 @@ import { FaGithub, FaLinkedin, FaRegGrinTears, FaTwitter, FaWhatsapp } from 'rea
 import { FaLinkedinIn } from 'react-icons/fa';
 import { Text, Box, Flex, Stack, Button ,Center, Link,Icon} from '@chakra-ui/react';
 import {motion} from 'framer-motion';
-import { HomeIconList } from './Store/ProjectList';
+import { HomeIconList, MyName } from './Store/ProjectStore';
 export default function Profile() {
   const [loopNum, setLoopNum] = useState(0);
   const [isDeleting, setIsDelecting] = useState(false)
@@ -72,15 +72,15 @@ export default function Profile() {
             <Box></Box>
       </Flex>
       {/*Introduction*/}
-      <Flex flexWrap='wrap'  gap={10} w='100%' h='100%'  justify='space-around' align='center' bg='#cffafe' >
+      <Flex flexWrap='wrap'  gap={6} w='100%' h='100%'  justify='space-around' align='center' bg='#cffafe' >
         <motion.Box 
         initial={{opacity: 0, translateY: 0, y: 200}}
         whileInView = {{opacity: 1, translateY: 1, y: 0}}
         transition = {{duration: 0.9}}
          >
           
-          <Text fontSize='xl' fontWeight='bold'  style={{fontFamily: '"Changa" , sans-serif'}}>Hello,I am</Text>
-          <Text color='#14b8a6' style={{fontFamily: '"Changa" , sans-serif'}} fontSize='3xl' h='50px'  fontWeight='600'>{text}</Text>
+          <Text style={MyName}>Hello,I am</Text>
+          <Text style={MyName} h='50px'>{text}</Text>
           <Text maxW={80} fontWeight='600' fontSize='12px' style={{fontFamily: 'Signika" , sans-serif'}}>I enjoy building everything from small business sites to rich interactive web apps, if you own a business seeking a web developer or an employer looking to hire,you can get in touch with me here.</Text>
 
           <Stack direction='row' spacing={4} mt={8}>
@@ -104,7 +104,7 @@ export default function Profile() {
         </motion.Box>
          
         <Box h='300px' w='250px' overflow='hidden'>
-          <img src={Image} alt='' borderRadius='100%'/>
+          <img src={Image} alt='' h='100%' borderRadius='100%'/>
         </Box>
       </Flex>
      
