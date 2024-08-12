@@ -46,7 +46,7 @@ export const ProjectList =[
     ,
     {
         head: "Simple Calculator",
-        link: 'https://calculator-chideraben.Vercel.app',
+        link: 'https://calculator-benedict.vercel.app',
         image: calculator,
         title: '', 
         tools: 'HTML| CSS | JS  '
