@@ -85,7 +85,9 @@ export default function Profile() {
 
           <Stack direction='row' spacing={4} mt={8}>
             <Button  bg='#14b8a6' p='2' variant='solid'  fontSize='sm' color='white'  borderRadius={6}>
-              <Link href='https://chiderabenedict04@gmail.com' style={{fontFamily: '"Changa" , sans-serif'}}>CONTACT ME</Link>
+                 <a href="mailto:chiderabenedict04@gmail.com" target="_blank"  style={{fontFamily: '"Changa" , sans-serif'}}>
+                     CONTACT ME
+                 </a>
             </Button> 
             <Button bg='#14b8a6' variant='solid' p='2' fontSize='sm' color='white' style={{fontFamily: '"Changa" , sans-serif'}} borderRadius={3}>
               <Link href="https://www.dropbox.com/scl/fi/2xld82svcfnr4gsvn6x36/OKAFOR-BENEDICT-CHIDERA.pdf?rlkey=o3qlw4ouo1t9y82b59d4qv5z4&dl=0"> MY RESUME</Link>
