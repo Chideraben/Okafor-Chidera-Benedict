@@ -23,7 +23,7 @@ export const HomeIconList=[
         {icon: FaTwitter ,  style:{color: 'skyblue'}, href: 'https://x.com/benedic51298511?s=21'}
     ,
    
-        {icon: FaLinkedinIn, style:{color: '#0284c7'}, href: 'https://www.linkdin.com/in/benedict-okafor-0382522b1'}
+        {icon: FaLinkedinIn, style:{color: '#0284c7'}, href: 'https://www.linkedin.com/in/benedict-okafor-0382522b1?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app'}
     
 ]
 
